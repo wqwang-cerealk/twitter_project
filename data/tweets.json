@@ -1,0 +1,98 @@
+[
+  {
+    "_id": "123",
+    "topic": "Web Development",
+    "userName": "ReactJS",
+    "verified": false,
+    "handle": "ReactJS",
+    "time": "2h",
+    "title": "React.js is a component based front end library that makes it very easy to build Single Page Applications or SPAs",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "attachments": {
+      "video": "unKvMC3Y1kI"
+    },
+    "logo-image": "https://pbs.twimg.com/profile_images/446356636710363136/OYIaJ1KK.png",
+    "avatar-image": "https://pbs.twimg.com/profile_images/446356636710363136/OYIaJ1KK.png",
+    "stats": {
+      "comments": 123,
+      "retweets": 234,
+      "likes": 345
+    }
+  },
+  {
+    "_id": "567",
+    "topic": "Space",
+    "userName": "SpaceX",
+    "verified": false,
+    "handle": "spacex",
+    "title": "",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "attachments": {
+      "image": "https://cdn1.dotesports.com/wp-content/uploads/2020/07/21101537/SB_Ahri-1024x604.jpg"
+    },
+    "time": "last month",
+    "logo-image": "https://i.pinimg.com/550x/a8/e7/67/a8e7678f57aa1d86be963831bd8e0760.jpg",
+    "avatar-image": "https://i.pinimg.com/550x/a8/e7/67/a8e7678f57aa1d86be963831bd8e0760.jpg",
+    "tweets": "120K",
+    "stats": {
+      "comments": 123,
+      "retweets": 234,
+      "likes": 345
+    }
+  },
+  {
+    "_id": "234",
+    "topic": "Space",
+    "userName": "Scott Manley",
+    "verified": true,
+    "handle": "DJSnM",
+    "published-date": "2020-12-10",
+    "time": "1 day",
+    "title": "JavaScript is programming language that can run on browsers as well as desktops",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "logo-image": "https://avatarfiles.alphacoders.com/152/152177.jpg",
+    "avatar-image": "https://avatarfiles.alphacoders.com/152/152177.jpg",
+    "tweets": "123K",
+    "stats": {
+      "comments": 123,
+      "retweets": 234,
+      "likes": 345
+    }
+  },
+  {
+    "_id": "345",
+    "topic": "Web Development",
+    "userName": "jQuery",
+    "verified": false,
+    "handle": "jQuery",
+    "title": "jQuery",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "time": "last week",
+    "logo-image": "https://i.redd.it/puvfoabeg7o51.jpg",
+    "avatar-image": "https://i.redd.it/puvfoabeg7o51.jpg",
+    "tweets": "122K",
+    "stats": {
+      "comments": 123,
+      "retweets": 234,
+      "likes": 345
+    }
+  },
+  {
+    "_id": "456",
+    "topic": "Web Development",
+    "userName": "NodeJS",
+    "verified": true,
+    "handle": "NodeJS",
+    "title": "",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "time": "last month",
+    "logo-image": "https://static.u.gg/assets/lol/riot_static/11.22.1/img/profileicon/4793.png",
+    "avatar-image": "https://static.u.gg/assets/lol/riot_static/11.22.1/img/profileicon/4793.png",
+    "tweets": "120K",
+    "stats": {
+      "comments": 123,
+      "retweets": 234,
+      "likes": 345
+    }
+  }
+]
