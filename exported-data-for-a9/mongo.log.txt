@@ -1,0 +1,223 @@
+show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB 
+
+use webdev
+switched to db webdev
+
+db.movies.insert({title:'Aliens',rating:4.5})
+WriteResult({ "nInserted" : 1 })
+
+show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+webdev  0.000GB
+
+db.movies.insert({title:'Terminator',rating:4.8})
+WriteResult({ "nInserted" : 1 })
+
+db.movies.insert({title:'Avatar',rating:4.7})
+WriteResult({ "nInserted" : 1 })
+
+db.movies.insert({title:'Dune',rating:4.9})
+WriteResult({ "nInserted" : 1 })
+
+db.movies.find()
+{ "_id" : ObjectId("61a1733133608501f8669770"), "title" : "Aliens", "rating" : 4.5 }
+{ "_id" : ObjectId("61a1738c33608501f8669771"), "title" : "Terminator", "rating" : 4.8 }
+{ "_id" : ObjectId("61a173a633608501f8669772"), "title" : "Avatar", "rating" : 4.7 }
+{ "_id" : ObjectId("61a173c933608501f8669773"), "title" : "Dune", "rating" : 4.9 }
+
+db.movies.find({_id:ObjectId("61a1733133608501f8669770")});
+{ "_id" : ObjectId("61a1733133608501f8669770"), "title" : "Aliens", "rating" : 4.5 }
+
+db.movies.find({title:'Aliens'});
+{ "_id" : ObjectId("61a1733133608501f8669770"), "title" : "Aliens", "rating" : 4.5 }
+
+db.movies.find().pretty();
+{
+	"_id" : ObjectId("61a1733133608501f8669770"),
+	"title" : "Aliens",
+	"rating" : 4.5
+}
+{
+	"_id" : ObjectId("61a1738c33608501f8669771"),
+	"title" : "Terminator",
+	"rating" : 4.8
+}
+{
+	"_id" : ObjectId("61a173a633608501f8669772"),
+	"title" : "Avatar",
+	"rating" : 4.7
+}
+{
+	"_id" : ObjectId("61a173c933608501f8669773"),
+	"title" : "Dune",
+	"rating" : 4.9
+}
+
+db.movies.updateOne({title: 'Avatar'}, {$set:{rating: 4.9}});
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+
+db.movies.updateOne({_id:ObjectId("61a1733133608501f8669770")},{$set:{rating:4.5}});
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+
+db.movies.deleteOne({_id:ObjectId("61a1733133608501f8669770")});
+{ "acknowledged" : true, "deletedCount" : 1 }
+
+db.movies.find();
+{ "_id" : ObjectId("61a1738c33608501f8669771"), "title" : "Terminator", "rating" : 4.8 }
+{ "_id" : ObjectId("61a173a633608501f8669772"), "title" : "Avatar", "rating" : 4.9 }
+{ "_id" : ObjectId("61a173c933608501f8669773"), "title" : "Dune", "rating" : 4.9 }
+
+
+Build:
+db.tweets.insert({
+... "topic":"Web Development",
+... "userName":"ReactJS",
+... "verified": false,
+... "handle":"ReactJS",
+... "time":"2h",
+... "title":"React.js is a component based front end library that makes it very easy to build Single Page Applications or SPAs",
+... "tweet":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+... "attachments":{
+... "video":"unKvMC3Y1kI"
+... },
+... "logo-image":"https://pbs.twimg.com/profile_images/446356636710363136/OYIaJ1KK.png",
+... "avatar-image":"https://pbs.twimg.com/profile_images/446356636710363136/OYIaJ1KK.png",
+... "stats":{"comments":123,"retweets":234,"likes":345}
+... });
+WriteResult({ "nInserted" : 1 })
+
+db.tweets.insert({
+... "topic": "Space",
+...     "userName": "SpaceX",
+...     "verified": false,
+...     "handle": "spacex",
+...     "title": "",
+...     "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+...     "attachments": {
+...       "image": "https://cdn1.dotesports.com/wp-content/uploads/2020/07/21101537/SB_Ahri-1024x604.jpg"
+...     },
+...     "time": "last month",
+...     "logo-image": "https://i.pinimg.com/550x/a8/e7/67/a8e7678f57aa1d86be963831bd8e0760.jpg",
+...     "avatar-image": "https://i.pinimg.com/550x/a8/e7/67/a8e7678f57aa1d86be963831bd8e0760.jpg",
+...     "tweets": "120K",
+...     "stats": {
+...       "comments": 123,
+...       "retweets": 234,
+...       "likes": 345
+...     }
+... });
+WriteResult({ "nInserted" : 1 })
+
+db.tweets.insert({
+... "topic": "Space",
+...     "userName": "Scott Manley",
+...     "verified": true,
+...     "handle": "DJSnM",
+...     "published-date": "2020-12-10",
+...     "time": "1 day",
+...     "title": "JavaScript is programming language that can run on browsers as well as desktops",
+...     "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+...     "logo-image": "https://avatarfiles.alphacoders.com/152/152177.jpg",
+...     "avatar-image": "https://avatarfiles.alphacoders.com/152/152177.jpg",
+...     "tweets": "123K",
+...     "stats": {
+...       "comments": 123,
+...       "retweets": 234,
+...       "likes": 345
+...     }
+...    });
+WriteResult({ "nInserted" : 1 })
+
+db.tweets.insert({
+... "topic": "Web Development",
+...     "userName": "jQuery",
+...     "verified": false,
+...     "handle": "jQuery",
+...     "title": "jQuery",
+...     "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+...     "time": "last week",
+...     "logo-image": "https://i.redd.it/puvfoabeg7o51.jpg",
+...     "avatar-image": "https://i.redd.it/puvfoabeg7o51.jpg",
+...     "tweets": "122K",
+...     "stats": {
+...       "comments": 123,
+...       "retweets": 234,
+...       "likes": 345
+...     }
+... });
+WriteResult({ "nInserted" : 1 })
+
+db.tweets.insert({
+... "topic": "Web Development",
+...     "userName": "NodeJS",
+...     "verified": true,
+...     "handle": "NodeJS",
+...     "title": "",
+...     "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+...     "time": "last month",
+...     "logo-image": "https://static.u.gg/assets/lol/riot_static/11.22.1/img/profileicon/4793.png",
+...     "avatar-image": "https://static.u.gg/assets/lol/riot_static/11.22.1/img/profileicon/4793.png",
+...     "tweets": "120K",
+...     "stats": {
+...       "comments": 123,
+...       "retweets": 234,
+...       "likes": 345
+...     }
+...  });
+WriteResult({ "nInserted" : 1 })
+
+db.who.insert({
+...     "avatarIcon": "https://www.pngitem.com/pimgs/m/538-5380039_logo-java-clipart-png-download-java-circle-icon.png",
+...     "userName": "Java",
+...     "handle": "Java"
+...  })
+WriteResult({ "nInserted" : 1 })
+
+db.who.insert({
+...     "avatarIcon": "https://www.finsmes.com/wp-content/uploads/2020/11/relativity-space.jpg",
+...     "userName": "Relativity Space",
+...     "handle": "relativityspace"
+...  })
+WriteResult({ "nInserted" : 1 })
+
+db.who.insert({
+...     "avatarIcon": "https://www.krwg.org/sites/krwg/files/202005/virgin-orbit-light-logo.png",
+...     "userName": "Virgin Galactic",
+...     "handle": "virgingalactic"
+...  })
+WriteResult({ "nInserted" : 1 })
+
+db.who.insert({
+...     "avatarIcon": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png",
+...     "userName": "NASA",
+...     "handle": "NASA"
+...  })
+WriteResult({ "nInserted" : 1 })
+
+db.who.insert({
+...     "avatarIcon": "https://download.logo.wine/logo/Tesla%2C_Inc./Tesla%2C_Inc.-Logo.wine.png",
+...     "userName": "Tesla",
+...     "handle": "Tesla"
+...  })
+WriteResult({ "nInserted" : 1 })
+
+db.profile.insert({
+... "name": "Alex W",
+...     "handle": "alex",
+...     "profilePicture": "https://i1.sndcdn.com/avatars-000432717039-nhdrhy-t240x240.jpg",
+...     "bannerPicture": "https://forevergeek.com/wp-content/media/2007/05/The-Bioscope-STAR-WARS-BANNER-for-site-1024x281.jpg",
+...     "bio": "INTP meme creator",
+...     "website": "#",
+...     "location": "San Jose, CA",
+...     "dateOfBirth": "5/15/1997",
+...     "dateJoined": "7/2017",
+...     "numberOfTweets": 49,
+...     "followingCount" : 312,
+...     "followersCount": 180
+... })
+WriteResult({ "nInserted" : 1 })
